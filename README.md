@@ -25,7 +25,14 @@ PHP Dockerized gives you everything you need for developing PHP applications loc
 
 ## Running
 
-Set up a Docker Machine and then run:
+Create a Docker Machine with:
+
+```sh
+docker-machine create --driver virtualbox --virtualbox-cpu-count "4" --virtualbox-disk-size "30000" --virtualbox-memory "2048"  --virtualbox-host-dns-resolver php
+eval "$(docker-machine env php)"
+```
+
+Then set up a Docker Machine and then run:
 
 ```sh
 $ docker-compose up
